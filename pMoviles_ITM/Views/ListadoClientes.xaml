@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pMoviles_ITM.Views.ListadoClientes">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="LISTADO DE CLIENTES" FontSize="Medium" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <CollectionView x:Name="lstClientes" SelectionMode="Single" Margin="0">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid Padding="0" RowSpacing="0" HeightRequest="40">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="14" />
+                                <ColumnDefinition Width="78" />
+                                <ColumnDefinition Width="75" />
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="140" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding ID}" FontSize="14" />
+                            <Label Grid.Column="1" Text="{Binding Documento}" FontSize="14" />
+                            <Label Grid.Column="2" Text="{Binding Nombres}" FontSize="14"/>
+                            <Label Grid.Column="3" Text="{Binding Apellidos}" FontSize="14"/>
+                            <Label Grid.Column="4" Text="{Binding Telefono}" FontSize="14"/>
+                            <Label Grid.Column="5" Text="{Binding Email}" FontSize="14"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

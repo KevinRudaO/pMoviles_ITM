@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pMoviles_ITM.Views.Productos">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="ADMINISTRACIÓN DE PRODUCTOS" FontSize="Large" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <Grid ColumnDefinitions="*,*">
+                <Entry x:Name="txtID" FontSize="Medium" Placeholder="ID del producto"></Entry>
+                <Entry Grid.Column="1" x:Name="txtNombres" FontSize="Medium" Placeholder="Nombre del producto"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Entry x:Name="txtValor" FontSize="Medium" Placeholder="Valor del producto"></Entry>
+                <Entry Grid.Column="1" x:Name="txtInventario" FontSize="Medium" Placeholder="Inventario"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Button x:Name="btnIngresar" Text="INGRESAR" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnIngresar_Clicked"></Button>
+                <Button Grid.Column="1" x:Name="btnActualizar" Text="ACTUALIZAR" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnActualizar_Clicked"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Button x:Name="btnEliminar" Text="ELIMINAR" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Red" TextColor="White" Clicked="btnEliminar_Clicked"></Button>
+                <Button Grid.Column="1" x:Name="btnConsultarXId" Text="CONSULTAR ID" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Red" TextColor="White" Clicked="btnConsultarXId_Clicked"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*">
+                <Button x:Name="btnConsultarTodos" Text="QRY TODOS" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnConsultarTodos_Clicked"></Button>
+            </Grid>
+        </StackLayout> 
+    </ContentPage.Content>
+</ContentPage>

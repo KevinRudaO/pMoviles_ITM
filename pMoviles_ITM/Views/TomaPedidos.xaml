@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="pMoviles_ITM.Views.TomaPedidos">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Label Text="TOMA DE PEDIDOS" FontSize="Large" FontAttributes="Bold"
+                HorizontalOptions="CenterAndExpand" />
+            <Grid ColumnDefinitions="80,100,90,*">
+                <Label Text="Fecha: " FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label Grid.Column="1" x:Name="lblFecha" FontSize="Small"></Label>
+                <Label Grid.Column="2" Text="Pedido: " FontSize="Medium" FontAttributes="Bold"></Label>
+                <Label Grid.Column="3" x:Name="lblPedido" FontSize="Small"></Label>
+            </Grid>
+            <Grid ColumnDefinitions="150,30,*">
+                <Entry x:Name="txtDocumento" FontSize="Medium" Placeholder="Documento"></Entry>
+                <ImageButton x:Name="btnConsultarCliente" Grid.Column="1" Source="lupa.png" Clicked="btnConsultarCliente_Clicked"></ImageButton>
+                <Label Grid.Column="2" x:Name="lblCliente" FontSize="Small"></Label>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Entry x:Name="txtTelefono" FontSize="Medium" Placeholder="Telefono del cliente"></Entry>
+                <Entry Grid.Column="1" x:Name="txtEmail" FontSize="Medium" Placeholder="Email del cliente"></Entry>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Button x:Name="btnIngresar" Text="INGRESAR" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnIngresar_Clicked"></Button>
+                <Button Grid.Column="1" x:Name="btnActualizar" Text="ACTUALIZAR" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnActualizar_Clicked"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Button x:Name="btnEliminar" Text="ELIMINAR" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnEliminar_Clicked"></Button>
+                <Button Grid.Column="1" x:Name="btnConsultarXId" Text="CONSULTAR ID" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnConsultarXId_Clicked"></Button>
+            </Grid>
+            <Grid ColumnDefinitions="*,*">
+                <Button x:Name="btnConsultarXDocumento" Text="QRY DOCUMENTO" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnConsultarXDocumento_Clicked"></Button>
+                <Button Grid.Column="1" x:Name="btnConsultarTodos" Text="QRY TODOS" FontSize="Medium" FontAttributes="Bold" BackgroundColor="Navy" TextColor="White" Clicked="btnConsultarTodos_Clicked"></Button>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
