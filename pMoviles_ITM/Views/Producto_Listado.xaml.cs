@@ -23,7 +23,7 @@ namespace pMoviles_ITM.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            lstProductos.ItemsSource = await bProductos.GetProductoss();
+            lstProductos.ItemsSource = await bProductos.GetProductos();
         }
     }
 }

@@ -18,6 +18,7 @@ namespace pMoviles_ITM
             Routing.RegisterRoute(nameof(Productos), typeof(Productos));
             Routing.RegisterRoute(nameof(Producto_Listado), typeof(Producto_Listado));
             Routing.RegisterRoute(nameof(TomaPedidos), typeof(TomaPedidos));
+            Routing.RegisterRoute(nameof(CarroCompras), typeof(CarroCompras));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

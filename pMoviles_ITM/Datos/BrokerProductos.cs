@@ -15,7 +15,7 @@ namespace pMoviles_ITM.Datos
         {
             oBaseDatos = new SQLiteAsyncConnection(RutaBD);
         }
-        public Task<List<viewProductos>> GetProductoss()
+        public Task<List<viewProductos>> GetProductos()
         {
             return oBaseDatos.Table<viewProductos>().ToListAsync();
         }

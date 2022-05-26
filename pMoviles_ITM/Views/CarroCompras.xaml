@@ -3,10 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="pMoviles_ITM.Views.CarroCompras">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <StackLayout Padding="10">
+            <Label Text="PRODUCTOS SELECCIONADOS"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="Start" />
+            <CollectionView x:Name="lstProductos" SelectionMode="Single" Margin="0">
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="0" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid Padding="0" RowSpacing="0" HeightRequest="40">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="80" />
+                                <ColumnDefinition Width="80" />
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text="{Binding ID}" FontSize="14" />
+                            <Label Grid.Column="1" Text="{Binding NumeroPedido}" FontSize="14" />
+                            <Label Grid.Column="2" Text="{Binding IDCliente}" FontSize="14"/>
+                            <Label Grid.Column="3" Text="{Binding IDProducto}" FontSize="14"/>
+                            <Label Grid.Column="4" Text="{Binding Fecha}" FontSize="14"/>
+                            <Label Grid.Column="5" Text="{Binding Cantidad}" FontSize="14"/>
+                            <Label Grid.Column="6" Text="{Binding ValorUnitario}" FontSize="14"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
